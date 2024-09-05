@@ -9,9 +9,9 @@ def main():
     temp = int(input("온도를 입력해주세요.: "))
 
     if tp == "f":
-        print(f"{temp}f => {trans_temp(tp, temp)}c")
+        print(f"{temp}f => {trans_temp(tp, temp):.1f}c")
     else:
-        print(f"{temp}c => {trans_temp(tp, temp)}f")
+        print(f"{temp}c => {trans_temp(tp, temp):.1f}f")
         
 if __name__ == "__main__":
     main()
