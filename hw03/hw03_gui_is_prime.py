@@ -13,9 +13,17 @@ def is_prime(n):
     return True
 
 def gui_prime():
-    n = int(input_num.get())
-    result.delete(0, END)
-    result.insert(0, f"{n}은 소수가 {["아닙니다.", "맞습니다."][int(is_prime(n))]}")
+    try:
+        n = int(input_num.get())
+        if is_prime(n):
+            result.delete(0, END)
+            result.insert(0, f"{n}은 소수가 맞습니다.")
+        else:
+            result.delete(0, END)
+            result.insert(0,f"{n}은 소수가 아닙니다.")
+    except ValueError:
+        result.delete(0,END)
+        result.insert(0,"유효한 숫자를 입력해 주세요.")
 
 
 def main():
