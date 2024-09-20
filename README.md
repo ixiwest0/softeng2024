@@ -15,3 +15,4 @@
   
     https://m.post.naver.com/viewer/postView.naver?volumeNo=37942372&memberNo=6255089
     https://www.raspberrypi.com/documentation/computers/getting-started.html#install-an-operating-system
+    https://docs.sunfounder.com/projects/raphael-kit/en/latest/python_pi5/check_the_gpiozero_python.html
