@@ -12,5 +12,6 @@
 <p>웹 기초 - Flask, get</p>
 <p>라즈베리 파이 세팅</p>
   *참고할 만한 문서
+  
     *https://m.post.naver.com/viewer/postView.naver?volumeNo=37942372&memberNo=6255089
     *https://www.raspberrypi.com/documentation/computers/getting-started.html#install-an-operating-system
