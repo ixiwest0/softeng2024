@@ -10,9 +10,12 @@
 <p>hw02 gui</p>
 <li>hw04</li>
 <p>웹 기초 - Flask, get</p>
+<li>hw05</li>
 <p>라즈베리 파이 세팅</p>
   *참고할 만한 문서
   
     https://m.post.naver.com/viewer/postView.naver?volumeNo=37942372&memberNo=6255089
     https://www.raspberrypi.com/documentation/computers/getting-started.html#install-an-operating-system
     https://docs.sunfounder.com/projects/raphael-kit/en/latest/python_pi5/check_the_gpiozero_python.html
+<li>hw06</li>
+<p>팀홈페이지 만들기 =>깃헙 setting으로 링크 생성</p>
