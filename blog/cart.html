@@ -1,0 +1,69 @@
+{% extends 'blog/base.html' %}
+
+{% block main_area %}
+<style>
+    /* 카드 스타일 */
+    .card {
+        height: 200px; /* 카드 높이 조정 */
+        display: flex; /* 유연한 배치 */
+        flex-direction: row; /* 가로로 배치 */
+        align-items: center; /* 세로 정렬 */
+        padding: 10px; /* 카드 내부 여백 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+        border: 1px solid #ddd; /* 경계선 */
+        border-radius: 8px; /* 둥근 모서리 */
+    }
+
+    /* 카드 이미지 */
+    .card-img-top {
+        height: 150px; /* 이미지 높이 고정 */
+        width: 150px; /* 이미지 너비 고정 */
+        object-fit: cover; /* 이미지 비율 유지 */
+        margin-right: 10px; /* 이미지와 내용 간격 */
+    }
+
+    /* 카드 내용 */
+    .card-body {
+        flex: 1; /* 나머지 공간 차지 */
+    }
+
+    /* 제목 스타일 */
+    .card-title {
+        font-size: 1.2rem; /* 제목 크기 */
+        margin-bottom: 5px; /* 제목과 텍스트 간격 */
+    }
+
+    /* 텍스트 스타일 */
+    .card-text {
+        font-size: 0.9rem; /* 텍스트 크기 */
+        color: #555; /* 부드러운 텍스트 색상 */
+    }
+
+    /* 카드 간 간격 */
+    .col-lg-3 {
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        {% for p in post_list %}
+        <div class="col-lg-4 col-md-6 mb-4" id="post-{{ p.pk }}">
+            <!-- 카드 전체를 클릭 가능하게 -->
+            <a href="{{ p.get_absolute_url }}" class="card text-decoration-none text-dark">
+                {% if p.head_image %}
+                    <img class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image">
+                {% else %}
+                    <img class="card-img-top" src="https://picsum.photos/seed/{{ p.id }}/150/150" alt="random_image">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ p.title }}</h5>
+                    <p class="card-text">{{ p.hook_text }}</p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
